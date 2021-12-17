@@ -1,0 +1,68 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 62.5%; }
+
+:root {
+   --blue: hsl(246, 80%, 60%);
+   --lightRed: hsl(15, 100%, 70%);
+   --softBlue: hsl(195, 74%, 62%);
+   --lightRedStudy: hsl(348, 100%, 68%);
+   --limeGreen: hsl(145, 58%, 55%);
+   --violet: hsl(264, 64%, 52%);
+   --softOrange: hsl(43, 84%, 65%);
+   --white: #fff;
+
+   --veryDarkBlue: hsl(226, 43%, 10%);
+   --darkBlue: hsl(235, 46%, 20%);
+   --desaturatedBlue: hsl(235, 45%, 61%);
+   --paleBlue: hsl(236, 100%, 87%);
+}
+
+body {
+   font-size: 1.8rem;
+   font-family: 'Rubik', sans-serif;
+   font-weight: 300;
+
+   background-color: var(--veryDarkBlue);
+   color: var(--white);
+}
+.cards-container {
+   max-width: min(120rem, 90%);
+   margin: 0 auto;
+}
+.cards {
+   display: grid;
+   grid-auto-flow: row;
+   grid-gap: 2rem;
+}
+.card {
+   background-color: var(--darkBlue);
+   border-radius: 2rem;
+   padding: 3rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+.card header {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+.card footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+.card__title {
+   margin: 0;
+}
+.card__hour {
+   font-size: 4rem;
+   margin: 0;
+}
+.card__previous {
+   margin: 0;
+}
+/*
+* Mobile: 375px
+* Desktop: 1440px
+*/
