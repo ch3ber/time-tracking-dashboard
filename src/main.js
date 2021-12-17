@@ -32,7 +32,7 @@ const fetchData = async url => {
 }
 
 async function CardsWithData() {
-   const data = await fetchData('./data.json');
+   const data = await fetchData('../data.json');
    const CARD_DAILY = data.map(card => Card(card.title, card.timeframes.daily.current, card.timeframes.daily.previous, 'Daily')).join('');
    const CARD_WEEKLY = data.map(card => Card(card.title, card.timeframes.weekly.current, card.timeframes.weekly.previous, 'Weekly')).join('');
    const CARD_MONTHLY = data.map(card => Card(card.title, card.timeframes.monthly.current, card.timeframes.monthly.previous, 'Monthly')).join('');
@@ -47,7 +47,7 @@ const Card = (title, current, previous, category) => {
             <p class="card__hour">${current}hrs</p>
          </header>
          <footer>
-            <img src="./images/icon-ellipsis.svg "/>
+            <img src="./src/images/icon-ellipsis.svg "/>
             <p class="card__previous">Last ${category} - ${previous}hrs</p>
          </footer>
       </div>
