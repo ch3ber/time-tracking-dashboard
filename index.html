@@ -16,32 +16,24 @@
    <link rel="stylesheet" href="src/styles.css">
 
    <title>Frontend Mentor | Time tracking dashboard</title>
-
-   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-   <style>
-      .attribution {
-         font-size: 11px;
-         text-align: center;
-      }
-
-      .attribution a {
-         color: hsl(228, 45%, 44%);
-      }
-   </style>
 </head>
 
 <body>
 
    <main class="cards-container">
       <div class="card__main">
-         <img src="src/images/image-jeremy.png" alt="Jeremy Robson (Frontend Mentor)">
-         <p>Report for</p>
-         <h2>Jeremy Robson</h2>
+         <header class="card__main__header">
+            <img src="src/images/image-jeremy.png" alt="Jeremy Robson (Frontend Mentor)">
+            <div class="card__main__header__title">
+               <p>Report for</p>
+               <h2>Jeremy Robson</h2>
+            </div>
+         </header>
 
-         <ul>
-            <li><button class="card__main__button">Daily</button></li>
-            <li><button class="card__main__button">Weekly</button></li>
-            <li><button class="card__main__button">Monthly</button></li>
+         <ul class="card__main__categories">
+            <li class="card__main__categorie"><button class="card__main__button card__main__button--select">Daily</button></li>
+            <li class="card__main__categorie"><button class="card__main__button">Weekly</button></li>
+            <li class="card__main__categorie"><button class="card__main__button">Monthly</button></li>
          </ul>
       </div>
 

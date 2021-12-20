@@ -11,15 +11,22 @@ document.querySelectorAll('.card__main__button')
 async function switchContentCards(event) {
    const [CARD_DAILY, CARD_WEEKLY, CARD_MONTHLY] = await CardsWithData();
    const container = document.querySelector('.cards');
+   const button = event.target;
+   const buttonText = event.target.textContent;
+   const buttonsCategory = document.querySelectorAll('.card__main__button');
 
-   switch (event.target.textContent) {
+   buttonsCategory.forEach(button => button.classList.remove('card__main__button--select'))
+   switch (buttonText) {
       case 'Daily':
+         button.classList.add('card__main__button--select');
          container.innerHTML = CARD_DAILY;
          break;
       case 'Weekly':
+         button.classList.add('card__main__button--select');
          container.innerHTML = CARD_WEEKLY;
          break;
       case 'Monthly':
+         button.classList.add('card__main__button--select');
          container.innerHTML = CARD_MONTHLY;
          break;
    }

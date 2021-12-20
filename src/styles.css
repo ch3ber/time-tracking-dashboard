@@ -25,10 +25,65 @@ body {
    background-color: var(--veryDarkBlue);
    color: var(--white);
 }
+
+/* main container */
 .cards-container {
-   max-width: min(120rem, 90%);
+   max-width: min(144rem, 90%);
    margin: 0 auto;
+   display: grid;
 }
+
+/* main card */
+.card__main {
+   background-color: var(--darkBlue);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: stretch;
+   border-radius: 2rem;
+   overflow: hidden;
+}
+.card__main__header {
+   background-color: var(--blue);
+   padding: 3rem;
+   border-radius: 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.card__main__header > img {
+   border-radius: 50%;
+   border: var(--white) solid .5rem;
+   width: 10rem;
+   height: auto;
+}
+.card__main__header__title > h2,p {
+   line-height: 1.5;
+   margin: 0;
+   font-weight: 300;
+}
+.card__main__categories {
+   display: flex;
+   justify-content: space-between;
+   align-items: stretch;
+   padding: 2rem;
+   list-style: none;
+   margin: 0;
+}
+.card__main__button {
+   border: none;
+   padding: 1rem;
+   color: var(--desaturatedBlue);
+   background-color: transparent;
+}
+.card__main__button:hover {
+   color: var(--white);
+}
+.card__main__button--select {
+   color: var(--white);
+}
+
+/* cards */
 .cards {
    display: grid;
    grid-auto-flow: row;
@@ -47,11 +102,6 @@ body {
    flex-direction: column;
    justify-content: flex-start;
 }
-.card footer {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-end;
-}
 .card__title {
    margin: 0;
 }
@@ -59,10 +109,51 @@ body {
    font-size: 4rem;
    margin: 0;
 }
-.card__previous {
-   margin: 0;
+.card footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: flex-end;
+   gap: 2rem;
+   color: var(--paleBlue);
 }
 /*
 * Mobile: 375px
 * Desktop: 1440px
 */
+
+@media (min-width: 1440px) {
+   .cards-container {
+
+   }
+   .card__main {
+      justify-content: flex-start;
+   }
+   .card__main__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+   }
+   .card__main__header > img {
+      margin-bottom: 4rem;
+   }
+   .card__main__header__title > h2 {
+      font-size: 6rem;
+   }
+   .card__main__categories {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+}
+
+/* attribution */
+.attribution {
+   margin: 3rem 0;
+   font-size: 1.1rem;
+   text-align: center;
+}
+
+.attribution a {
+   color: var(--paleBlue);
+}
