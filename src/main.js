@@ -10,22 +10,19 @@ window.addEventListener('load', async () => {
 async function switchCategory(event) {
    const [CARD_DAILY, CARD_WEEKLY, CARD_MONTHLY] = await getAllCategoryCards();
    const container = document.querySelector('.cards');
-   const button = event.target;
    const category = event.target.dataset.category;
 
    removeCssClassFromElements('card__main__button', 'card__main__button--select')
+   event.target.classList.add('card__main__button--select');
 
    switch (category) {
       case 'daily':
-         button.classList.add('card__main__button--select');
          container.innerHTML = CARD_DAILY;
          break;
       case 'weekly':
-         button.classList.add('card__main__button--select');
          container.innerHTML = CARD_WEEKLY;
          break;
       case 'monthly':
-         button.classList.add('card__main__button--select');
          container.innerHTML = CARD_MONTHLY;
          break;
    }
@@ -59,17 +56,17 @@ async function getDefaultCards() {
 const Card = (title, current, previous, category, imgPath) => {
    const view = `
       <div class="card">
-         <div class="card__hero">
-            <img src="${imgPath}" alt="category image"/>
+         <div class="card__hero card__${title.toLowerCase().replace(' ', '-')}">
+            <div class="card__hero__overlay">
+               <img src="${imgPath}" alt="category image"/>
+            </div>
          </div>
-         <header>
+         <div class="card__info">
             <h2 class="card__title">${title}</h2>
-            <p class="card__hour">${current}hrs</p>
-         </header>
-         <footer>
             <img src="./src/images/icon-ellipsis.svg "/>
+            <p class="card__hour">${current}hrs</p>
             <p class="card__previous">Last ${category} - ${previous}hrs</p>
-         </footer>
+         </div>
       </div>
    `
    return view

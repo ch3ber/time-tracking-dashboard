@@ -98,36 +98,53 @@ body {
    grid-auto-rows: 1fr;
    grid-gap: 3rem;
 }
+
+/* card */
 .card {
+   border-radius: 2rem;
+   overflow: hidden;
+   z-index: 1;
+}
+.card__hero {
+   height: 7.5rem;
+   display: flex;
+   justify-content: flex-end;
+   position: static;
+}
+.card__hero__overlay {
+   padding: 0 5rem;
+   height: 5.5rem;
+   overflow: hidden;
+}
+.card__hero__overlay img {
+   width: 120%;
+   margin-top: -1rem;
+}
+.card__info {
+   position: static;
+   margin-top: -2rem;
    background-color: var(--darkBlue);
    border-radius: 2rem;
-   padding: 3rem;
    display: flex;
    justify-content: space-between;
-   align-items: flex-start;
+   align-items: center;
+   padding: 3rem;
+   flex-wrap: wrap;
+   z-index: 9;
 }
-.card:hover {
-   background-color: var(--hoverCard);
-}
-.card header {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
+.card__info:hover { background-color: var(--hoverCard); }
+.card__info img {
+   cursor: pointer;
+   padding: 1rem;
 }
 .card__title {
+   font-size: 2rem;
+   flex-basis: 70%;
    margin: 0;
 }
 .card__hour {
    font-size: 4rem;
    margin: 0;
-}
-.card footer {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: flex-end;
-   gap: 2rem;
-   color: var(--paleBlue);
 }
 /*
 * Mobile: 375px
@@ -139,6 +156,7 @@ body {
       flex-direction: row;
    }
    .cards {
+      flex: 3 0 0;
       grid-row: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
    }
@@ -162,6 +180,9 @@ body {
       flex-direction: column;
       align-items: flex-start;
    }
+   .card__hour {
+      font-size: 6.5rem;
+   }
 }
 
 /* attribution */
@@ -170,7 +191,26 @@ body {
    font-size: 1.1rem;
    text-align: center;
 }
-
 .attribution a {
    color: var(--paleBlue);
+}
+
+/* cards hero bg colors */
+.card__work {
+   background-color: var(--lightRed);
+}
+.card__play {
+   background-color: var(--softBlue);
+}
+.card__study {
+   background-color: var(--lightRedStudy);
+}
+.card__exercise {
+   background-color: var(--limeGreen);
+}
+.card__social {
+   background-color: var(--violet);
+}
+.card__self-care {
+   background-color: var(--softOrange);
 }
