@@ -29,13 +29,18 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   height: 100vh;
+   min-height: 100vh;
 }
+/*
+* Mobile: 375px
+* Desktop: 1440px
+*/
 
 /* main container */
 .cards-container {
    max-width: min(144rem, 90%);
    margin: 0 auto;
+   padding: 10rem 0;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -146,10 +151,6 @@ body {
    font-size: 4rem;
    margin: 0;
 }
-/*
-* Mobile: 375px
-* Desktop: 1440px
-*/
 
 @media (min-width: 1440px) {
    .cards-container {
@@ -183,16 +184,6 @@ body {
    .card__hour {
       font-size: 6.5rem;
    }
-}
-
-/* attribution */
-.attribution {
-   margin: 3rem 0;
-   font-size: 1.1rem;
-   text-align: center;
-}
-.attribution a {
-   color: var(--paleBlue);
 }
 
 /* cards hero bg colors */
