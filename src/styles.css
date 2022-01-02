@@ -71,11 +71,12 @@ body {
    width: 10rem;
    height: auto;
 }
-.card__main__header__title > h2,p {
+.card__main__header__title > h1,p {
    line-height: 1.5;
    margin: 0;
    font-weight: 300;
 }
+.card__main__header__title > h1 { font-size: 1.5em; }
 .card__main__categories {
    display: flex;
    justify-content: space-between;
@@ -174,7 +175,7 @@ body {
    .card__main__header > img {
       margin-bottom: 4rem;
    }
-   .card__main__header__title > h2 {
+   .card__main__header__title > h1 {
       font-size: 6rem;
    }
    .card__main__categories {
