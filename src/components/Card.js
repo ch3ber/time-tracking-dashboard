@@ -8,7 +8,7 @@ export const Card = (title, current, previous, category, imgPath) => {
          </div>
          <div class="card__info">
             <h2 class="card__title">${title}</h2>
-            <img src="./src/images/icon-ellipsis.svg "/>
+            <img src="./src/images/icon-ellipsis.svg" alt="category banner image" />
             <p class="card__hour">${current}hrs</p>
             <p class="card__previous">Last ${category} - ${previous}hrs</p>
          </div>
